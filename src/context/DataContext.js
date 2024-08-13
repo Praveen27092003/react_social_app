@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom';
 const DataContext = createContext({});
 
 export const DataProvider = ({ children }) => {
-      {/* ---------------Example Social Media Post Page--------------------- */}
+      
       const [posts, setPosts] = useState([])
       const [search, setSearch] = useState('')
       const [searchResults, setSearchResults] = useState([])
@@ -26,26 +26,7 @@ export const DataProvider = ({ children }) => {
       }, [data])
     
      
-      // // axios get-------------------
-      // useEffect(() => {
-      //   const fetchPosts = async () => {
-      //     try {
-      //       const response = await api.get('/posts')
-      //       setPosts(response.data)
-      //     } catch (err) {
-      //       if (err.response) {
-      //         console.log(err.response.data)
-      //         console.log(err.response.status)
-      //         console.log(err.response.headers)
-      //       } else {
-      //         console.log(`Error: ${err.message}`)
-              
-      //       }
-      //     }
-      //   }
     
-      //   fetchPosts()
-      // },  [])
     
       useEffect(() => {
         const filteredResults = posts.filter((post) =>
